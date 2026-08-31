@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>딴짓잠금 / Focus Latch — 개인정보처리방침</title>
+<style>
+  :root{--bg:#F7F7F5;--card:#FFF;--ink:#17191D;--muted:#5F6570;--line:#E3E1DD;--accent:#3D45C8}
+  @media (prefers-color-scheme:dark){
+    :root{--bg:#101218;--card:#191C23;--ink:#E9EBEF;--muted:#98A0AC;--line:#282C35;--accent:#8F96FF}
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);
+    font:16px/1.75 -apple-system,BlinkMacSystemFont,"Segoe UI","Apple SD Gothic Neo","Noto Sans KR",sans-serif}
+  .wrap{max-width:760px;margin:0 auto;padding:56px 22px 90px}
+  header{border-bottom:1px solid var(--line);padding-bottom:26px;margin-bottom:36px}
+  h1{font-size:27px;margin:0 0 8px;letter-spacing:-.02em}
+  .meta{color:var(--muted);font-size:14px;margin:0}
+  .nav{margin-top:18px;font-size:14px}
+  .nav a{color:var(--accent);text-decoration:none;margin-right:16px}
+  .nav a:hover{text-decoration:underline}
+  h2{font-size:21px;margin:48px 0 6px;letter-spacing:-.01em;padding-top:8px}
+  h3{font-size:16px;margin:28px 0 4px}
+  p{margin:8px 0 14px}
+  ul{margin:8px 0 16px;padding-left:22px}
+  li{margin:5px 0}
+  .key{background:var(--card);border:1px solid var(--line);border-left:3px solid var(--accent);
+    border-radius:10px;padding:16px 18px;margin:20px 0}
+  .key p{margin:0}
+  code{background:var(--card);border:1px solid var(--line);border-radius:5px;padding:1px 6px;font-size:14px}
+  footer{margin-top:60px;padding-top:24px;border-top:1px solid var(--line);color:var(--muted);font-size:14px}
+  hr.big{border:0;border-top:1px solid var(--line);margin:64px 0 0}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <h1>딴짓잠금 / Focus Latch</h1>
+  <p class="meta">개인정보처리방침 · Privacy Policy</p>
+  <p class="meta">시행일 / Effective: 2026년 8월 31일 · 패키지 <code>com.srkplatform.focus</code></p>
+  <p class="nav"><a href="#ko">한국어</a><a href="#en">English</a></p>
+</header>
+
+<h2 id="ko">한국어</h2>
+
+<div class="key">
+<p><strong>딴짓잠금은 서버가 없습니다.</strong> 어떤 정보도 수집하지 않고, 어디로도 전송하지 않습니다. 모든 데이터는 사용자의 기기 안에만 있으며, 앱을 삭제하면 함께 사라집니다.</p>
+</div>
+
+<h3>1. 수집하는 개인정보</h3>
+<p>없습니다. 이 앱은 이름, 이메일, 전화번호, 위치, 연락처, 광고 식별자를 포함한 어떤 개인정보도 수집하지 않습니다. 회원가입이나 로그인이 없으며 계정 자체가 존재하지 않습니다.</p>
+
+<h3>2. 기기에 저장되는 정보</h3>
+<p>앱이 동작하려면 다음 정보가 기기 내부 저장소에 보관됩니다. 이 정보는 앱 밖으로 나가지 않습니다.</p>
+<ul>
+  <li>사용자가 만든 잠금 규칙 — 대상 앱 목록, 요일, 시간대, 사용시간 한도</li>
+  <li>규칙 판정을 위한 앱 사용시간 누적값</li>
+  <li>긴급 해제 시 사용자가 직접 입력한 사유 텍스트</li>
+</ul>
+<p>이 정보는 안드로이드가 앱별로 격리해 제공하는 저장 영역에 저장되며, 다른 앱이 읽을 수 없습니다.</p>
+
+<h3>3. 접근성 서비스 사용</h3>
+<p>딴짓잠금은 안드로이드 접근성 서비스(Accessibility Service)를 사용합니다. 이는 잠금 대상 앱이 화면에 나타나는 즉시 차단 화면을 띄우기 위한 것으로, 이 목적 외에는 사용하지 않습니다.</p>
+<p>앱이 접근성 서비스를 통해 읽는 정보는 <strong>현재 화면에 있는 앱의 패키지 이름 하나뿐</strong>입니다. 구체적으로 다음은 읽지 않습니다.</p>
+<ul>
+  <li>화면에 표시된 글자나 이미지</li>
+  <li>입력 중인 텍스트, 비밀번호, 검색어</li>
+  <li>메시지, 이메일, 웹페이지의 내용</li>
+  <li>키 입력, 클립보드</li>
+</ul>
+<p>읽은 패키지 이름은 잠금 여부를 판단하는 즉시 사용되고 버려지며, 저장하거나 전송하지 않습니다.</p>
+
+<h3>4. 설치된 앱 목록</h3>
+<p>잠금할 앱을 고르는 화면을 만들기 위해 기기에 설치된 앱 목록을 조회합니다. 이 목록은 화면에 보여주는 용도로만 쓰이며, 사용자가 규칙에 직접 추가한 앱을 제외하고는 저장하지 않고 전송하지도 않습니다.</p>
+
+<h3>5. 광고와 분석 도구</h3>
+<p>사용하지 않습니다. 광고 SDK, 분석 SDK, 크래시 리포트 도구, 그 밖의 제3자 라이브러리를 통해 사용자 정보를 수집하지 않습니다.</p>
+
+<h3>6. 네트워크 사용</h3>
+<p>앱은 인터넷 연결 없이 완전히 동작합니다. 사용자 정보를 목적으로 하는 통신을 하지 않습니다.</p>
+
+<h3>7. 제3자 제공</h3>
+<p>수집하는 정보가 없으므로 제3자에게 제공하거나 판매할 정보 자체가 존재하지 않습니다.</p>
+
+<h3>8. 아동</h3>
+<p>이 앱은 만 14세 미만 아동을 대상으로 하지 않으며, 아동으로부터 어떠한 정보도 수집하지 않습니다.</p>
+
+<h3>9. 정보 삭제</h3>
+<p>앱을 삭제하면 위 2항의 모든 정보가 기기에서 함께 삭제됩니다. 앱 내에서 개별 잠금 규칙을 삭제하는 것도 언제든 가능합니다. 외부 서버에 사본이 없으므로 별도의 삭제 요청 절차가 필요하지 않습니다.</p>
+
+<h3>10. 방침 변경</h3>
+<p>이 방침이 변경되면 이 페이지의 시행일이 갱신됩니다. 수집 항목이 늘어나는 변경이 있을 경우 앱 업데이트 시 안내합니다.</p>
+
+<h3>11. 문의</h3>
+<p>개인정보처리방침에 관한 문의는 <a href="mailto:srkflatform@gmail.com">srkflatform@gmail.com</a> 으로 보내주시기 바랍니다.</p>
+
+<hr class="big">
+
+<h2 id="en">English</h2>
+
+<div class="key">
+<p><strong>Focus Latch has no server.</strong> It collects nothing and transmits nothing. All data stays on your device and is removed when you uninstall the app.</p>
+</div>
+
+<h3>1. Personal information we collect</h3>
+<p>None. This app does not collect your name, email, phone number, location, contacts, or advertising identifiers. There is no sign-up, no login, and no account.</p>
+
+<h3>2. What is stored on your device</h3>
+<p>The app keeps the following in its private on-device storage so it can work. None of it leaves your phone.</p>
+<ul>
+  <li>The blocking rules you create — app lists, days, time ranges, usage limits</li>
+  <li>Usage counters needed to evaluate those rules</li>
+  <li>The reason text you type when you use an emergency unlock</li>
+</ul>
+<p>This is written to app-private storage that Android isolates from other apps.</p>
+
+<h3>3. Use of the Accessibility Service</h3>
+<p>Focus Latch uses Android's Accessibility Service for one purpose: to show a block screen the moment a blocked app comes to the foreground. It is not used for anything else.</p>
+<p>The only thing the app reads through this service is <strong>the package name of the app currently on screen</strong>. Specifically, it does not read:</p>
+<ul>
+  <li>Text or images displayed on your screen</li>
+  <li>Anything you type, including passwords and search queries</li>
+  <li>The contents of messages, email, or web pages</li>
+  <li>Keystrokes or your clipboard</li>
+</ul>
+<p>The package name is used immediately to decide whether to block, then discarded. It is never stored or transmitted.</p>
+
+<h3>4. Installed app list</h3>
+<p>The app queries the list of installed applications so you can choose which ones to block. The list is used only to render that picker. Apart from the apps you deliberately add to a rule, it is not stored and never transmitted.</p>
+
+<h3>5. Advertising and analytics</h3>
+<p>None. The app contains no advertising SDK, no analytics SDK, no crash-reporting tool, and no other third-party library that collects information about you.</p>
+
+<h3>6. Network use</h3>
+<p>The app functions fully without an internet connection and makes no network requests for the purpose of collecting your information.</p>
+
+<h3>7. Sharing with third parties</h3>
+<p>Because nothing is collected, there is nothing to share or sell.</p>
+
+<h3>8. Children</h3>
+<p>This app is not directed at children under 13, and no information is knowingly collected from children.</p>
+
+<h3>9. Deleting your data</h3>
+<p>Uninstalling the app removes everything listed in section 2 from your device. You can also delete individual rules at any time inside the app. Because no copy exists on any server, there is no separate deletion request process.</p>
+
+<h3>10. Changes to this policy</h3>
+<p>If this policy changes, the effective date at the top of this page is updated. If a change ever expands what the app stores, it will be disclosed in the app at update time.</p>
+
+<h3>11. Contact</h3>
+<p>Questions about this policy: <a href="mailto:srkflatform@gmail.com">srkflatform@gmail.com</a></p>
+
+<footer>
+  딴짓잠금 / Focus Latch — <code>com.srkplatform.focus</code><br>
+  SRK Platform · 최종 수정 2026-08-31
+</footer>
+
+</div>
+</body>
+</html>
